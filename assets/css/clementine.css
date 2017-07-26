@@ -1,0 +1,71 @@
+.mdl-data-table {
+  margin: 20px auto;
+  max-width: 90%;
+}
+
+.mdl-data-table thead th,
+.mdl-data-table tbody td {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  line-height: 48px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,.12);
+}
+
+.mdl-data-table thead th,
+.mdl-data-table tbody td:first-child {
+  font-size: 1.2em;
+}
+
+.mdl-data-table thead th.hovered,
+.mdl-data-table tbody td:first-child.hovered,
+.mdl-data-table tbody td:not(:first-child):hover {
+  background-color: rgb(222, 222, 222);
+  font-weight: bold;
+  font-size: 1.5em;
+  -webkit-transition: font-size 0.1s ease-in-out;
+  transition: font-size 0.1s ease-in-out;
+}
+
+.mdl-data-table tbody td:not(:first-child):not(.processed) {
+  cursor: pointer;
+}
+
+.mdl-data-table tbody td:last-of-type,
+.mdl-data-table thead th:last-of-type {
+  padding-right: 0;
+}
+
+.mdl-data-table tbody td:first-of-type,
+.mdl-data-table thead th:first-of-type {
+  padding-left: 0;
+}
+
+.mdl-data-table tbody tr:hover {
+  background-color: inherit;
+}
+
+.mdl-data-table tbody td:not(:first-child):not(:hover).linked {
+  background-color: rgb(244, 244, 244);
+}
+
+@keyframes scale {
+  0% {
+      background-color: rgb(222, 222, 222);
+  }
+  90% {
+      transform: scale(2);
+      -webkit-transform: scale(2);
+  }
+  100% {
+      background-color: inherit;
+      transform: scale(1);
+      -webkit-transform: scale(1);
+  }
+}
+
+.mdl-data-table tbody td:not(:first-child).processed {
+  animation: scale 0.3s linear;
+  -webkit-animation: scale 0.3s linear;
+}

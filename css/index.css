@@ -1,0 +1,410 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+body {
+  display: table-cell;
+  vertical-align: middle;
+  background: white;
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body > * {
+  margin: auto;
+}
+
+@font-face {
+  font-family: "SFUIDisplay";
+  src: url(../fonts/SFUIText-Regular.ttf) format("truetype");
+}
+
+.device-content {
+  font-family: "SFUIDisplay";
+}
+
+.header {
+  width: 100%;
+    height: 67px;
+    z-index: 1000;
+    background-color: rgb(249, 249, 249);
+    border-bottom: 1px solid #b5b5b5;
+}
+
+.header .status-bar {
+  position: relative;
+  width: 100%;
+  height: 12px;
+  padding: 2px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  color: #000;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.header .status-bar .network {
+  float: left;
+}
+
+.header .status-bar .network * {
+
+  display: inline-block;
+}
+
+.header .status-bar .network:before {
+  content: '•••••';
+  font-size: 20px;
+  padding-left: 5px;
+  padding-right: 4px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.header .status-bar .network:after {
+  content:'';
+  background: url("../img/icons/wifi_black.png") no-repeat;
+  display: inline-block;
+}
+
+.header .status-bar .icons {
+  float: right;
+}
+
+.header .status-bar img {
+  margin: 0 4px;
+  height: 10px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.header .status-bar .time {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 500;
+}
+
+.header .header-content {
+  clear: both;
+  width: 100%;
+    height: calc(100% - 16px);
+    text-align: center;
+    position: relative;
+}
+
+.header .header-content img {
+  max-height: calc(100% - 15px);
+  margin: auto;
+  border-radius: 50%;
+}
+
+.header .header-content .name {
+  margin-top: 2px;
+  font-size: 10px;
+      opacity: 0.8;
+      font-family: "SFUIDisplay";
+}
+
+.header .header-content .more {
+  position: absolute;
+  top: calc(50% - 9px);
+  right: 0;
+  margin-right: 10px;
+  height: 18px;
+  width: 18px;
+  background: url(../img/information.png) no-repeat;
+  background-size: contain;
+}
+
+.messages {
+  display: block;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  height: calc(100% - 36px - 67px);
+  width: 100%;
+  padding: 4px;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.message {
+  animation-duration: 1.5s; /* the duration of the animation */
+animation-timing-function: ease-out; /* how the animation will behave */
+animation-delay: 0s; /* how long to delay the animation from starting */
+animation-iteration-count: 1; /* how many times the animation will play */
+animation-name: slideInFromLeft; /* the name of the animation we defined above */
+  margin: 0 0 0.5em;
+  padding: 0 0.5em;
+  overflow: hidden;
+}
+
+.message p {
+  margin: 0;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #e5e5ea;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.message p::after {
+      box-sizing: initial;
+}
+
+.message.them p {
+  float: left;
+}
+
+.message.them p::after {
+  content: "";
+  position: absolute;
+  left: -0.5em;
+  bottom: 0;
+  width: 0.5em;
+  height: 1em;
+  border-right: 0.5em solid #e5e5ea;
+  border-bottom-right-radius: 1em 0.5em;
+}
+
+.message.me p {
+  float: right;
+}
+
+.message.me p {
+  background-color: #1289fe;
+  color: white;
+  margin-left:auto;
+  margin-right:0;
+}
+.message.me p::after {
+  content: "";
+  position: absolute;
+  right: -0.5em;
+  bottom: 0;
+  width: 0.5em;
+  height: 1em;
+  border-left: 0.5em solid #1289fe;
+  border-bottom-left-radius: 1em 0.5em;
+}
+
+.message .date {
+  transition:all .5s;
+  height: 1em;
+  white-space:nowrap;
+  vertical-align:middle;
+  color: #8b8b90;
+  opacity: 1;
+  font-size: 12px;
+  text-align: center;
+}
+
+.message:not(:hover) .date {
+  height: 0px;
+  opacity: 0;
+}
+
+.message:hover .date {
+  margin-bottom: 4px;
+}
+
+.messages .title {
+  white-space:nowrap;
+  vertical-align:middle;
+  color: #8b8b90;
+  opacity: 1;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.typing-indicator {
+  background-color: #E6E7ED;
+  will-change: transform;
+  width: auto;
+  border-radius: 50px;
+  padding: 10px;
+  margin-bottom: 8px;
+  display: table !important;
+  position: relative;
+  -webkit-animation: 2s bulge infinite ease-out;
+  animation: 2s bulge infinite ease-out;
+}
+
+.typing-indicator.them {
+  margin-left: 8px;
+}
+
+.typing-indicator.me {
+  margin-left: auto;
+  margin-right: 8px;
+}
+
+.typing-indicator::before, .typing-indicator::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #E6E7ED;
+}
+
+.typing-indicator.them::before, .typing-indicator.them::after {
+  left: -1px;
+}
+
+.typing-indicator.me::before, .typing-indicator.me::after {
+  right: -1px;
+}
+
+.typing-indicator.them::after {
+  height: 5px;
+  width: 5px;
+  left: -5px;
+  bottom: -5px;
+}
+
+.typing-indicator.me::after {
+  height: 5px;
+  width: 5px;
+  right: -5px;
+  bottom: -5px;
+}
+
+.typing-indicator span {
+  height: 7px;
+  width: 7px;
+  float: left;
+  margin: 0 1px;
+  background-color: #9E9EA1;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
+.typing-indicator.them span:nth-of-type(1),
+.typing-indicator.me span:nth-of-type(3) {
+  -webkit-animation: 1s blink infinite 0.3333s;
+  animation: 1s blink infinite 0.3333s;
+}
+
+.typing-indicator span:nth-of-type(2) {
+  -webkit-animation: 1s blink infinite 0.6666s;
+  animation: 1s blink infinite 0.6666s;
+}
+
+.typing-indicator.them span:nth-of-type(3),
+.typing-indicator.me span:nth-of-type(1) {
+  -webkit-animation: 1s blink infinite 0.9999s;
+  animation: 1s blink infinite 0.9999s;
+}
+
+@-webkit-keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes bulge {
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes bulge {
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+
+.input {
+  border: 0.9px solid rgba(191, 191, 193, 0.75);
+  border-radius: 50px;
+  height: 24px;
+  padding-left: 10px;
+  width: calc(100% - 8px);
+  margin: 4px;
+}
+
+input{
+  font: 400 14px 'Open Sans', sans-serif;
+  border:0;
+  height: 100%;
+  outline:0;
+}
+
+input[type='text']{
+  width:73%;
+  float:left;
+}
+
+input[type='submit']{
+  width:23%;
+  background:transparent;
+  color:#1289fe;
+  font-weight:500;
+  text-align:right;
+  float:right;
+}
+
+@media screen and (max-width: 840px) {
+  .device {
+    height: 100%;
+    width: 100%;
+  }
+
+  .device .device-frame {
+    background: inherit !important;
+    box-shadow: inherit !important;
+    padding: inherit !important;
+    height: inherit !important;
+    width: inherit !important;
+    border-radius: inherit !important;
+  }
+
+  .device .device-content {
+    height: inherit !important;
+    width: inherit !important;
+    border: inherit !important;
+    border-radius: inherit !important;
+  }
+
+  .device > *:not(.device-frame) {
+    display: none;
+  }
+
+  .header .status-bar {
+    display: none;
+  }
+
+  .header .header-content {
+    height: 100%;
+  }
+}

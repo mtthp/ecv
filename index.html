@@ -64,18 +64,26 @@
 			})
 
 			var d = new Date();
-  			var h = addLeadingZero(d.getHours())
-  			var m = addLeadingZero(d.getMinutes())
-  			var s = addLeadingZero(d.getSeconds())
-  			document.querySelector('.status-bar .time').innerHTML = h + ":" + m
-  			var day = addLeadingZero(d.getDate())
-  			var month = addLeadingZero(d.getMonth())
-  			var year = d.getFullYear()
-  			document.querySelector('.messages .title .starting-date').innerHTML = day + '/' + month + '/' + year + ', ' + h + ":" + m
-			setInterval(function() {
-				var d = new Date();
-  				document.querySelector('.status-bar .time').innerHTML = addLeadingZero(d.getHours()) + ":" + addLeadingZero(d.getMinutes())
-			}, 60000)
+			var h = addLeadingZero(d.getHours())
+			var m = addLeadingZero(d.getMinutes())
+			var s = addLeadingZero(d.getSeconds())
+			var day = addLeadingZero(d.getDate())
+			var month = addLeadingZero(d.getMonth())
+			var year = d.getFullYear()
+			document.querySelector('.messages .title .starting-date').innerHTML = day + '/' + month + '/' + year + ', ' + h + ":" + m
+
+			function updateTime() {
+				var d = new Date()
+				document.querySelector('.status-bar .time').innerHTML = addLeadingZero(d.getHours()) + ":" + addLeadingZero(d.getMinutes())
+			}
+			updateTime()
+			setTimeout(function() {
+				updateTime()
+				setInterval(function() {
+					updateTime()
+				}, 60000)
+			}, (60 - d.getSeconds()) * 1000 - d.getMilliseconds())
+
 			sendEvent("WELCOME");
 		</script>
 	</body>

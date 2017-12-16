@@ -1,5 +1,8 @@
 # e-cv
 Personal website about myself and my skills using API.AI (also known as DialogFlow)
+<p align="center">
+  <img src="https://github.com/mtthp/ecv/blob/master/assets/ChatBot.gif">
+</p>
 
 ## Influence
 Multiple codepen gave me the idea of creating a chatbot to answer all questions about my CV. Here they are :

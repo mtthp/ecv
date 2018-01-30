@@ -42,7 +42,7 @@
             <div class="device-sensors"></div>
             <div class="device-btns"></div>
             <div class="device-power"></div>
-          </div>
+         </div>
 
 		<script src="js/ApiAi.min.js"></script>
 		<script src="js/index.js"></script>
@@ -82,6 +82,13 @@
 			}, (60 - d.getSeconds()) * 1000 - d.getMilliseconds())
 
 			sendEvent("WELCOME");
+		</script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-49778518-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'UA-49778518-1');
 		</script>
 	</body>
 </html>

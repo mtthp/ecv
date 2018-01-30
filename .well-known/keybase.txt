@@ -1,0 +1,69 @@
+==================================================================
+https://keybase.io/mtthp
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://matthieupetit.cf
+  * I am mtthp (https://keybase.io/mtthp) on keybase.
+  * I have a public key with fingerprint B6C9 F464 2D07 7CB8 659D  8161 0C3A A5F3 24D1 8BB3
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101156cd4b747dd6e36af480aecbd5f4842d99ecefe1cf592e2440419f10b31cead0a",
+      "fingerprint": "b6c9f4642d077cb8659d81610c3aa5f324d18bb3",
+      "host": "keybase.io",
+      "key_id": "0c3aa5f324d18bb3",
+      "kid": "0101156cd4b747dd6e36af480aecbd5f4842d99ecefe1cf592e2440419f10b31cead0a",
+      "uid": "ea4e454878616a6520ae844459d8bb19",
+      "username": "mtthp"
+    },
+    "service": {
+      "hostname": "matthieupetit.cf",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1517057617,
+  "expire_in": 157680000,
+  "prev": "78972438b0106297ac1c763819c3bbf44291ccaf13f235061358595140c992f1",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.76
+Comment: https://keybase.io/crypto
+
+yMImAnicrVJbSBRRGF7LO90gsSBIGCEVlnXOzJnbVhAVFBiGkWVe2mbOnHGH1Zlt
+Z3a9IUWJShIlXaioh4gIA0srQS0rQ0tKMx8qiQjJklBE2kjpoeyM5VOvnZdz/v//
+vu98/8/ft3ypKzmmBbQ9Gk1cXRjzovdC2FVYFsmroRRTraK8NVQAL1y4TMWW7Qvo
+KuWlaEADwPFIhYoABVXlMcvLGhRpGSNF5cgLMqokYYQ1DJDGSQxmIKQhkDRAKyxA
+WFZpmXJTmm6U4lAwpBs2kVV4JGmQJ1xaEJAi8pykioAHNGJlmdNYBqpAVBSWEP2m
+5TCIOUW2sEc3SY4Evj/2/sX/Z9/hBTksQww5KAoiD3iZ5xiiI0IIHduKAiQHaOGQ
+IZdjgi63bX+QqnVTJBXREXam6rSxWJZJXcfhILZ124M0Qg6GTNtEZhmp+m07aHkd
+tl0VdOAVWPH9FfIpuqGSQRJGBIcs3TQoLyBIZOuOMuCAQHMCDwQ3hSuDegj7dAdB
+UiJNjvMPjhBJQZQEBrKiQsbEM5IgI4AEnhWBhFhF0SBkJICQrAFWY1iO5gHLiZzE
+AUgjSWI0QDmtHTZMyssRm3IpkbT0UkO2wyFM1T55XBzrikl2xcctcRbMlZy0anHt
++kcSXa0zVFzawPfBc7XX+3q+9eY09V1l7oDWFbMDn3KmOkYmvgi5BQefzg03fMg6
+ETudnTbempA6hntmT73Xz84X7eqcjLRdeyBmdDYFh+o3Tedn79wyf7Iwcil+PPrq
+YcnRaNtbK9MXY9QlBjbP3cuMnrHH73s2dlT/aLZyhq/k764/zwB5z835xrT2pNFb
+I77nKQWR/YO3l1W9y/WJv2Y9dPWbls8vW3YU2fvWSimwciTu68/4knWvn9Vdjna5
+0497DO6Gq/VQ4t1ta7SE7tSZYnysqyJUfbo9Mz3PndHvn60duhhoM7NqGibHtk7P
+TYR7uo807v14oKmZ3b6ye/1UxobfyjJFwA==
+=+XDd
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mtthp
+
+==================================================================
+

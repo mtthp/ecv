@@ -126,8 +126,7 @@ body > * {
 
 .messages {
   display: block;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: auto;
   position: relative;
   height: calc(100% - 36px - 67px);
   width: 100%;
@@ -147,10 +146,10 @@ body > * {
 
 .message {
   animation-duration: 1.5s; /* the duration of the animation */
-animation-timing-function: ease-out; /* how the animation will behave */
-animation-delay: 0s; /* how long to delay the animation from starting */
-animation-iteration-count: 1; /* how many times the animation will play */
-animation-name: slideInFromLeft; /* the name of the animation we defined above */
+  animation-timing-function: ease-out; /* how the animation will behave */
+  animation-delay: 0s; /* how long to delay the animation from starting */
+  animation-iteration-count: 1; /* how many times the animation will play */
+  animation-name: slideInFromLeft; /* the name of the animation we defined above */
   margin: 0 0 0.5em;
   padding: 0 0.5em;
   overflow: hidden;
@@ -406,5 +405,9 @@ input[type='submit']{
 
   .header .header-content {
     height: 100%;
+  }
+
+  .messages {
+    overflow: initial;
   }
 }
